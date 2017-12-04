@@ -9,9 +9,11 @@
    </head>
    <body ng-app="accion">
     <div class="table-responsive" ng-controller="tableCtrl">
-        <div></div>
-        <span class="label label-primary">Ordered By: {{orderByField}}</span>
-        <table class="table table-bordered">
+        <div class="loader" ng-if="!isResponseSuccess">
+            <img src="./assets/loader.gif"/>
+        </div>
+        <span class="label label-primary" ng-if="isResponseSuccess">Ordered By: {{orderByField}}</span>
+        <table class="table table-bordered"  ng-if="isResponseSuccess">
             <thead>
                 <tr>
                     <th>
