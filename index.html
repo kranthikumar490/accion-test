@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Accion table</title>
+      <meta name="author" content="Kranthi">
+      <link rel="stylesheet" href="./css/bootstrap.min.css">
+      <link rel="stylesheet" href="./css/style.css">
+   </head>
+   <body ng-app="accion">
+    <div class="table-responsive" ng-controller="tableCtrl">
+        <div></div>
+        <span class="label label-primary">Ordered By: {{orderByField}}</span>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="#" ng-click="orderByField='id'; reverse = !reverse">
+                            Id <span ng-show="orderByField == 'id'"><span ng-show="!reverse">^</span><span ng-show="reverse">v</span></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="orderByField='userId'; reverse = !reverse">
+                                User Id <span ng-show="orderByField == 'userId'"><span ng-show="!reverse">^</span><span ng-show="reverse">v</span></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="orderByField='title'; reverse = !reverse">
+                                Title <span ng-show="orderByField == 'title'"><span ng-show="!reverse">^</span><span ng-show="reverse">v</span></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="orderByField='body'; reverse = !reverse">
+                                Body <span ng-show="orderByField == 'body'"><span ng-show="!reverse">^</span><span ng-show="reverse">v</span></span>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in tableContent|orderBy:orderByField:reverse">
+                    <td>{{item.id}}</td>
+                    <td>{{item.userId}}</td>
+                    <td>{{item.title}}</td>
+                    <td>{{item.body}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/angular-route.min.js"></script>
+    <script src="./js/script.js"></script>
+   </body>
+</html>
