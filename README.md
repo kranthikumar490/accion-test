@@ -14,7 +14,7 @@ A loader is being shown on the page to prompt the user that the process of API r
 
 #installation process
 
--> after cloning the code, run 'npm install' command for the project folder so that the required dependencies are installed.
-->
+-> after cloning the code, run 'npm install' command at the project folder so that the required dependencies mentioned in package.json are installed.
+-> run the index.html in the browser preferably through a server.
 
 
