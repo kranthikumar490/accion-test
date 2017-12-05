@@ -1,0 +1,13 @@
+{
+    "name": "accion",
+    "version": "1.0.0",
+    "description": "Sample app code for Accion test",
+    "dependencies": {
+      "angular" : "1.5.8",
+      "bootstrap" : "3.3.7"
+    },
+    "devDependencies": {
+        
+    }
+  }
+  

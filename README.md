@@ -12,3 +12,9 @@ On click of the headers of each column sorts the rows in ascending/ descending o
 A loader is being shown on the page to prompt the user that the process of API request is in progress, which on hides after the successful reciept of response from the request.
 
 
+#installation process
+
+-> after cloning the code, run 'npm install' command for the project folder so that the required dependencies are installed.
+->
+
+
